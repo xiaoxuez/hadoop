@@ -1,0 +1,23 @@
+
+*.DS_Store  
+
+# Build Artifacts  
+  
+.gradle/  
+build/  
+/target/  
+bin/  
+lib/
+dependency-reduced-pom.xml  
+  
+# Eclipse Project Files  
+  
+.classpath  
+.project  
+.settings/ 
+/target/
+
+.idea
+*.iml
+worker.yaml
+*.out
