@@ -12,7 +12,12 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-
+/**
+ * 文本格式为
+ * 2015010722
+ * @author xiaoxuez
+ *
+ */
 public class Temperature {
 	static class TempMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 		@Override
@@ -63,7 +68,7 @@ public class Temperature {
         Job job = new Job(hadoopConfig);
         
         //如果需要打成jar运行，需要下面这句
-        //job.setJarByClass(NewMaxTemperature.class);
+        //job.setJarByClass(Temperature.class);
 
         //job执行作业时输入和输出文件的路径
         FileInputFormat.addInputPath(job, new Path(dst));
